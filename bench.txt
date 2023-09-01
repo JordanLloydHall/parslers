@@ -1,0 +1,555 @@
+
+running 57 tests
+test test::parse_fail::case_01 ... ignored
+test test::parse_fail::case_02 ... ignored
+test test::parse_fail::case_03 ... ignored
+test test::parse_fail::case_04 ... ignored
+test test::parse_fail::case_05 ... ignored
+test test::parse_fail::case_06 ... ignored
+test test::parse_fail::case_07 ... ignored
+test test::parse_fail::case_08 ... ignored
+test test::parse_fail::case_09 ... ignored
+test test::parse_fail::case_10 ... ignored
+test test::parse_fail::case_11 ... ignored
+test test::parse_fail::case_12 ... ignored
+test test::parse_fail::case_13 ... ignored
+test test::parse_fail::case_14 ... ignored
+test test::parse_fail::case_15 ... ignored
+test test::parse_fail::case_16 ... ignored
+test test::parse_fail::case_17 ... ignored
+test test::parse_fail::case_18 ... ignored
+test test::parse_fail::case_19 ... ignored
+test test::parse_fail::case_20 ... ignored
+test test::parse_fail::case_21 ... ignored
+test test::parse_fail::case_22 ... ignored
+test test::parse_fail::case_23 ... ignored
+test test::parse_fail::case_24 ... ignored
+test test::parse_fail::case_25 ... ignored
+test test::parse_fail::case_26 ... ignored
+test test::parse_fail::case_27 ... ignored
+test test::parse_fail::case_28 ... ignored
+test test::parse_fail::case_29 ... ignored
+test test::parse_fail::case_30 ... ignored
+test test::parse_fail::case_31 ... ignored
+test test::parse_fail::case_32 ... ignored
+test test::parse_fail::case_33 ... ignored
+test test::parse_fail::case_34 ... ignored
+test test::parse_fail::case_35 ... ignored
+test test::parse_fail::case_36 ... ignored
+test test::parse_fail::case_37 ... ignored
+test test::parse_fail::case_38 ... ignored
+test test::parse_fail::case_39 ... ignored
+test test::parse_fail::case_40 ... ignored
+test test::parse_fail::case_41 ... ignored
+test test::parse_fail::case_42 ... ignored
+test test::parse_fail::case_43 ... ignored
+test test::parse_fail::case_44 ... ignored
+test test::parse_fail::case_45 ... ignored
+test test::parse_fail::case_46 ... ignored
+test test::parse_fail::case_47 ... ignored
+test test::parse_fail::case_48 ... ignored
+test test::parse_fail::case_49 ... ignored
+test test::parse_fail::case_50 ... ignored
+test test::parse_pass::case_1 ... ignored
+test test::parse_pass::case_2 ... ignored
+test test::parse_pass::case_3 ... ignored
+test test::parse_pass::case_4 ... ignored
+test test::parse_pass::case_5 ... ignored
+test test::parse_pass::case_6 ... ignored
+test test::parse_pass::case_7 ... ignored
+
+test result: ok. 0 passed; 0 failed; 57 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+branflakes/handwritten  time:   [42.660 ms 42.861 ms 43.060 ms]
+                        thrpt:  [47.173 MiB/s 47.392 MiB/s 47.616 MiB/s]
+                 change:
+                        time:   [+0.7813% +1.4484% +2.1550%] (p = 0.00 < 0.05)
+                        thrpt:  [-2.1095% -1.4277% -0.7752%]
+                        Change within noise threshold.
+branflakes/handwritten_validate
+                        time:   [1.6256 ms 1.6263 ms 1.6270 ms]
+                        thrpt:  [1.2192 GiB/s 1.2198 GiB/s 1.2203 GiB/s]
+                 change:
+                        time:   [-0.1029% +0.0224% +0.1584%] (p = 0.73 > 0.05)
+                        thrpt:  [-0.1582% -0.0224% +0.1030%]
+                        No change in performance detected.
+Found 13 outliers among 100 measurements (13.00%)
+  8 (8.00%) high mild
+  5 (5.00%) high severe
+branflakes/nom          time:   [101.07 ms 101.34 ms 101.61 ms]
+                        thrpt:  [19.990 MiB/s 20.043 MiB/s 20.098 MiB/s]
+                 change:
+                        time:   [-0.6162% -0.2863% +0.0790%] (p = 0.10 > 0.05)
+                        thrpt:  [-0.0789% +0.2871% +0.6200%]
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low mild
+branflakes/parslers     time:   [48.219 ms 48.441 ms 48.661 ms]
+                        thrpt:  [41.743 MiB/s 41.932 MiB/s 42.126 MiB/s]
+                 change:
+                        time:   [-3.8209% -3.1399% -2.4120%] (p = 0.00 < 0.05)
+                        thrpt:  [+2.4716% +3.2417% +3.9726%]
+                        Performance has improved.
+Found 2 outliers among 100 measurements (2.00%)
+  2 (2.00%) low mild
+branflakes/parslers_validate
+                        time:   [6.2983 ms 6.3018 ms 6.3059 ms]
+                        thrpt:  [322.12 MiB/s 322.33 MiB/s 322.51 MiB/s]
+                 change:
+                        time:   [-0.0853% -0.0048% +0.0853%] (p = 0.91 > 0.05)
+                        thrpt:  [-0.0852% +0.0048% +0.0854%]
+                        No change in performance detected.
+Found 10 outliers among 100 measurements (10.00%)
+  3 (3.00%) high mild
+  7 (7.00%) high severe
+branflakes/parslers_unoptimised
+                        time:   [53.823 ms 54.084 ms 54.347 ms]
+                        thrpt:  [37.376 MiB/s 37.557 MiB/s 37.739 MiB/s]
+                 change:
+                        time:   [-0.3786% +0.2595% +0.9995%] (p = 0.46 > 0.05)
+                        thrpt:  [-0.9896% -0.2588% +0.3800%]
+                        No change in performance detected.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) high mild
+branflakes/parslers_reduced
+                        time:   [49.309 ms 49.502 ms 49.695 ms]
+                        thrpt:  [40.875 MiB/s 41.034 MiB/s 41.194 MiB/s]
+                 change:
+                        time:   [+0.4818% +1.0154% +1.6002%] (p = 0.00 < 0.05)
+                        thrpt:  [-1.5750% -1.0051% -0.4795%]
+                        Change within noise threshold.
+branflakes/parslers_usage_analysed
+                        time:   [54.047 ms 54.333 ms 54.617 ms]
+                        thrpt:  [37.191 MiB/s 37.386 MiB/s 37.584 MiB/s]
+                 change:
+                        time:   [+0.0976% +0.8905% +1.6559%] (p = 0.02 < 0.05)
+                        thrpt:  [-1.6289% -0.8827% -0.0975%]
+                        Change within noise threshold.
+Found 1 outliers among 100 measurements (1.00%)
+  1 (1.00%) low mild
+branflakes/parslers_unstaged
+                        time:   [314.58 ms 314.83 ms 315.08 ms]
+                        thrpt:  [6.4468 MiB/s 6.4520 MiB/s 6.4571 MiB/s]
+                 change:
+                        time:   [-0.0206% +0.0861% +0.1978%] (p = 0.13 > 0.05)
+                        thrpt:  [-0.1974% -0.0861% +0.0206%]
+                        No change in performance detected.
+
+json canada/nom         time:   [17.055 ms 17.088 ms 17.125 ms]
+                        thrpt:  [125.36 MiB/s 125.63 MiB/s 125.87 MiB/s]
+                 change:
+                        time:   [-0.7344% -0.4344% -0.1468%] (p = 0.00 < 0.05)
+                        thrpt:  [+0.1470% +0.4363% +0.7398%]
+                        Change within noise threshold.
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+json canada/parslers    time:   [13.114 ms 13.162 ms 13.215 ms]
+                        thrpt:  [162.45 MiB/s 163.11 MiB/s 163.71 MiB/s]
+                 change:
+                        time:   [+0.3152% +0.7189% +1.1362%] (p = 0.00 < 0.05)
+                        thrpt:  [-1.1234% -0.7138% -0.3142%]
+                        Change within noise threshold.
+Found 4 outliers among 100 measurements (4.00%)
+  3 (3.00%) high mild
+  1 (1.00%) high severe
+json canada/parslers_unoptimised
+                        time:   [35.482 ms 35.536 ms 35.591 ms]
+                        thrpt:  [60.318 MiB/s 60.412 MiB/s 60.503 MiB/s]
+                 change:
+                        time:   [+0.7993% +0.9547% +1.1263%] (p = 0.00 < 0.05)
+                        thrpt:  [-1.1138% -0.9457% -0.7930%]
+                        Change within noise threshold.
+json canada/parslers_reduced
+                        time:   [35.636 ms 35.685 ms 35.736 ms]
+                        thrpt:  [60.074 MiB/s 60.158 MiB/s 60.242 MiB/s]
+                 change:
+                        time:   [+0.1543% +0.3662% +0.5690%] (p = 0.00 < 0.05)
+                        thrpt:  [-0.5658% -0.3648% -0.1541%]
+                        Change within noise threshold.
+json canada/parslers_usage_analysed
+                        time:   [13.247 ms 13.270 ms 13.297 ms]
+                        thrpt:  [161.45 MiB/s 161.78 MiB/s 162.05 MiB/s]
+                 change:
+                        time:   [+0.3023% +0.5020% +0.7170%] (p = 0.00 < 0.05)
+                        thrpt:  [-0.7119% -0.4995% -0.3014%]
+                        Change within noise threshold.
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+json canada/parslers_validate
+                        time:   [5.5215 ms 5.5239 ms 5.5267 ms]
+                        thrpt:  [388.44 MiB/s 388.63 MiB/s 388.80 MiB/s]
+                 change:
+                        time:   [+0.0459% +0.1108% +0.1734%] (p = 0.00 < 0.05)
+                        thrpt:  [-0.1731% -0.1107% -0.0459%]
+                        Change within noise threshold.
+Found 10 outliers among 100 measurements (10.00%)
+  9 (9.00%) high mild
+  1 (1.00%) high severe
+json canada/serde_json  time:   [8.2425 ms 8.2513 ms 8.2614 ms]
+                        thrpt:  [259.85 MiB/s 260.17 MiB/s 260.45 MiB/s]
+                 change:
+                        time:   [+0.0396% +0.1990% +0.3629%] (p = 0.02 < 0.05)
+                        thrpt:  [-0.3616% -0.1986% -0.0395%]
+                        Change within noise threshold.
+Found 3 outliers among 100 measurements (3.00%)
+  3 (3.00%) high severe
+json canada/combine     time:   [77.713 ms 77.790 ms 77.875 ms]
+                        thrpt:  [27.567 MiB/s 27.597 MiB/s 27.624 MiB/s]
+                 change:
+                        time:   [-0.6882% -0.5557% -0.4291%] (p = 0.00 < 0.05)
+                        thrpt:  [+0.4310% +0.5588% +0.6929%]
+                        Change within noise threshold.
+Found 3 outliers among 100 measurements (3.00%)
+  2 (2.00%) high mild
+  1 (1.00%) high severe
+json canada/parslers_unstaged
+                        time:   [595.65 ms 595.78 ms 595.93 ms]
+                        thrpt:  [3.6024 MiB/s 3.6033 MiB/s 3.6041 MiB/s]
+Found 2 outliers among 100 measurements (2.00%)
+  1 (1.00%) high mild
+  1 (1.00%) high severe
+json canada/pest        time:   [57.821 ms 57.938 ms 58.094 ms]
+                        thrpt:  [36.954 MiB/s 37.053 MiB/s 37.128 MiB/s]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 1 test
+test parsler::tests::ident_works_correctly ... ignored
+
+test result: ok. 0 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+running 311 tests
+test parser::tests::parse_fail::case_01 ... ignored
+test parser::tests::parse_fail::case_02 ... ignored
+test parser::tests::parse_fail::case_03 ... ignored
+test parser::tests::parse_fail::case_04 ... ignored
+test parser::tests::parse_fail::case_05 ... ignored
+test parser::tests::parse_fail::case_06 ... ignored
+test parser::tests::parse_fail::case_07 ... ignored
+test parser::tests::parse_fail::case_08 ... ignored
+test parser::tests::parse_fail::case_09 ... ignored
+test parser::tests::parse_fail::case_10 ... ignored
+test parser::tests::parse_fail::case_11 ... ignored
+test parser::tests::parse_fail::case_12 ... ignored
+test parser::tests::parse_fail::case_13 ... ignored
+test parser::tests::parse_fail::case_14 ... ignored
+test parser::tests::parse_fail::case_15 ... ignored
+test parser::tests::parse_fail::case_16 ... ignored
+test parser::tests::parse_fail::case_17 ... ignored
+test parser::tests::parse_fail::case_18 ... ignored
+test parser::tests::parse_fail::case_19 ... ignored
+test parser::tests::parse_fail::case_20 ... ignored
+test parser::tests::parse_fail::case_21 ... ignored
+test parser::tests::parse_fail::case_22 ... ignored
+test parser::tests::parse_fail::case_23 ... ignored
+test parser::tests::parse_fail::case_24 ... ignored
+test parser::tests::parse_fail::case_25 ... ignored
+test parser::tests::parse_fail::case_26 ... ignored
+test parser::tests::parse_fail::case_27 ... ignored
+test parser::tests::parse_fail::case_28 ... ignored
+test parser::tests::parse_fail::case_29 ... ignored
+test parser::tests::parse_fail::case_30 ... ignored
+test parser::tests::parse_fail::case_31 ... ignored
+test parser::tests::parse_fail::case_32 ... ignored
+test parser::tests::parse_fail::case_33 ... ignored
+test parser::tests::parse_fail::case_34 ... ignored
+test parser::tests::parse_fail::case_35 ... ignored
+test parser::tests::parse_fail::case_36 ... ignored
+test parser::tests::parse_fail::case_37 ... ignored
+test parser::tests::parse_fail::case_38 ... ignored
+test parser::tests::parse_fail::case_39 ... ignored
+test parser::tests::parse_fail::case_40 ... ignored
+test parser::tests::parse_fail::case_41 ... ignored
+test parser::tests::parse_fail::case_42 ... ignored
+test parser::tests::parse_fail::case_43 ... ignored
+test parser::tests::parse_fail::case_44 ... ignored
+test parser::tests::parse_fail::case_45 ... ignored
+test parser::tests::parse_fail::case_46 ... ignored
+test parser::tests::parse_fail::case_47 ... ignored
+test parser::tests::parse_fail::case_48 ... ignored
+test parser::tests::parse_fail::case_49 ... ignored
+test parser::tests::parse_fail::case_50 ... ignored
+test parser::tests::parse_pass::case_001 ... ignored
+test parser::tests::parse_pass::case_002 ... ignored
+test parser::tests::parse_pass::case_003 ... ignored
+test parser::tests::parse_pass::case_004 ... ignored
+test parser::tests::parse_pass::case_005 ... ignored
+test parser::tests::parse_pass::case_006 ... ignored
+test parser::tests::parse_pass::case_007 ... ignored
+test parser::tests::parse_pass::case_008 ... ignored
+test parser::tests::parse_pass::case_009 ... ignored
+test parser::tests::parse_pass::case_010 ... ignored
+test parser::tests::parse_pass::case_011 ... ignored
+test parser::tests::parse_pass::case_012 ... ignored
+test parser::tests::parse_pass::case_013 ... ignored
+test parser::tests::parse_pass::case_014 ... ignored
+test parser::tests::parse_pass::case_015 ... ignored
+test parser::tests::parse_pass::case_016 ... ignored
+test parser::tests::parse_pass::case_017 ... ignored
+test parser::tests::parse_pass::case_018 ... ignored
+test parser::tests::parse_pass::case_019 ... ignored
+test parser::tests::parse_pass::case_020 ... ignored
+test parser::tests::parse_pass::case_021 ... ignored
+test parser::tests::parse_pass::case_022 ... ignored
+test parser::tests::parse_pass::case_023 ... ignored
+test parser::tests::parse_pass::case_024 ... ignored
+test parser::tests::parse_pass::case_025 ... ignored
+test parser::tests::parse_pass::case_026 ... ignored
+test parser::tests::parse_pass::case_027 ... ignored
+test parser::tests::parse_pass::case_028 ... ignored
+test parser::tests::parse_pass::case_029 ... ignored
+test parser::tests::parse_pass::case_030 ... ignored
+test parser::tests::parse_pass::case_031 ... ignored
+test parser::tests::parse_pass::case_032 ... ignored
+test parser::tests::parse_pass::case_033 ... ignored
+test parser::tests::parse_pass::case_034 ... ignored
+test parser::tests::parse_pass::case_035 ... ignored
+test parser::tests::parse_pass::case_036 ... ignored
+test parser::tests::parse_pass::case_037 ... ignored
+test parser::tests::parse_pass::case_038 ... ignored
+test parser::tests::parse_pass::case_039 ... ignored
+test parser::tests::parse_pass::case_040 ... ignored
+test parser::tests::parse_pass::case_041 ... ignored
+test parser::tests::parse_pass::case_042 ... ignored
+test parser::tests::parse_pass::case_043 ... ignored
+test parser::tests::parse_pass::case_044 ... ignored
+test parser::tests::parse_pass::case_045 ... ignored
+test parser::tests::parse_pass::case_046 ... ignored
+test parser::tests::parse_pass::case_047 ... ignored
+test parser::tests::parse_pass::case_048 ... ignored
+test parser::tests::parse_pass::case_049 ... ignored
+test parser::tests::parse_pass::case_050 ... ignored
+test parser::tests::parse_pass::case_051 ... ignored
+test parser::tests::parse_pass::case_052 ... ignored
+test parser::tests::parse_pass::case_053 ... ignored
+test parser::tests::parse_pass::case_054 ... ignored
+test parser::tests::parse_pass::case_055 ... ignored
+test parser::tests::parse_pass::case_056 ... ignored
+test parser::tests::parse_pass::case_057 ... ignored
+test parser::tests::parse_pass::case_058 ... ignored
+test parser::tests::parse_pass::case_059 ... ignored
+test parser::tests::parse_pass::case_060 ... ignored
+test parser::tests::parse_pass::case_061 ... ignored
+test parser::tests::parse_pass::case_062 ... ignored
+test parser::tests::parse_pass::case_063 ... ignored
+test parser::tests::parse_pass::case_064 ... ignored
+test parser::tests::parse_pass::case_065 ... ignored
+test parser::tests::parse_pass::case_066 ... ignored
+test parser::tests::parse_pass::case_067 ... ignored
+test parser::tests::parse_pass::case_068 ... ignored
+test parser::tests::parse_pass::case_069 ... ignored
+test parser::tests::parse_pass::case_070 ... ignored
+test parser::tests::parse_pass::case_071 ... ignored
+test parser::tests::parse_pass::case_072 ... ignored
+test parser::tests::parse_pass::case_073 ... ignored
+test parser::tests::parse_pass::case_074 ... ignored
+test parser::tests::parse_pass::case_075 ... ignored
+test parser::tests::parse_pass::case_076 ... ignored
+test parser::tests::parse_pass::case_077 ... ignored
+test parser::tests::parse_pass::case_078 ... ignored
+test parser::tests::parse_pass::case_079 ... ignored
+test parser::tests::parse_pass::case_080 ... ignored
+test parser::tests::parse_pass::case_081 ... ignored
+test parser::tests::parse_pass::case_082 ... ignored
+test parser::tests::parse_pass::case_083 ... ignored
+test parser::tests::parse_pass::case_084 ... ignored
+test parser::tests::parse_pass::case_085 ... ignored
+test parser::tests::parse_pass::case_086 ... ignored
+test parser::tests::parse_pass::case_087 ... ignored
+test parser::tests::parse_pass::case_088 ... ignored
+test parser::tests::parse_pass::case_089 ... ignored
+test parser::tests::parse_pass::case_090 ... ignored
+test parser::tests::parse_pass::case_091 ... ignored
+test parser::tests::parse_pass::case_092 ... ignored
+test parser::tests::parse_pass::case_093 ... ignored
+test parser::tests::parse_pass::case_094 ... ignored
+test parser::tests::parse_pass::case_095 ... ignored
+test parser::tests::parse_pass::case_096 ... ignored
+test parser::tests::parse_pass::case_097 ... ignored
+test parser::tests::parse_pass::case_098 ... ignored
+test parser::tests::parse_pass::case_099 ... ignored
+test parser::tests::parse_pass::case_100 ... ignored
+test parser::tests::parse_pass::case_101 ... ignored
+test parser::tests::parse_pass::case_102 ... ignored
+test parser::tests::parse_pass::case_103 ... ignored
+test parser::tests::parse_pass::case_104 ... ignored
+test parser::tests::parse_pass::case_105 ... ignored
+test parser::tests::parse_pass::case_106 ... ignored
+test parser::tests::parse_pass::case_107 ... ignored
+test parser::tests::parse_pass::case_108 ... ignored
+test parser::tests::parse_pass::case_109 ... ignored
+test parser::tests::parse_pass::case_110 ... ignored
+test parser::tests::parse_pass::case_111 ... ignored
+test parser::tests::parse_pass::case_112 ... ignored
+test parser::tests::parse_pass::case_113 ... ignored
+test parser::tests::parse_pass::case_114 ... ignored
+test parser::tests::parse_pass::case_115 ... ignored
+test parser::tests::parse_pass::case_116 ... ignored
+test parser::tests::parse_pass::case_117 ... ignored
+test parser::tests::parse_pass::case_118 ... ignored
+test parser::tests::parse_pass::case_119 ... ignored
+test parser::tests::parse_pass::case_120 ... ignored
+test parser::tests::parse_pass::case_121 ... ignored
+test parser::tests::parse_pass::case_122 ... ignored
+test parser::tests::parse_pass::case_123 ... ignored
+test parser::tests::parse_pass::case_124 ... ignored
+test parser::tests::parse_pass::case_125 ... ignored
+test parser::tests::parse_pass::case_126 ... ignored
+test parser::tests::parse_pass::case_127 ... ignored
+test parser::tests::parse_pass::case_128 ... ignored
+test parser::tests::parse_pass::case_129 ... ignored
+test parser::tests::parse_pass::case_130 ... ignored
+test parser::tests::parse_pass::case_131 ... ignored
+test parser::tests::parse_pass::case_132 ... ignored
+test parser::tests::parse_pass::case_133 ... ignored
+test parser::tests::parse_pass::case_134 ... ignored
+test parser::tests::parse_pass::case_135 ... ignored
+test parser::tests::parse_pass::case_136 ... ignored
+test parser::tests::parse_pass::case_137 ... ignored
+test parser::tests::parse_pass::case_138 ... ignored
+test parser::tests::parse_pass::case_139 ... ignored
+test parser::tests::parse_pass::case_140 ... ignored
+test parser::tests::parse_pass::case_141 ... ignored
+test parser::tests::parse_pass::case_142 ... ignored
+test parser::tests::parse_pass::case_143 ... ignored
+test parser::tests::parse_pass::case_144 ... ignored
+test parser::tests::parse_pass::case_145 ... ignored
+test parser::tests::parse_pass::case_146 ... ignored
+test parser::tests::parse_pass::case_147 ... ignored
+test parser::tests::parse_pass::case_148 ... ignored
+test parser::tests::parse_pass::case_149 ... ignored
+test parser::tests::parse_pass::case_150 ... ignored
+test parser::tests::parse_pass::case_151 ... ignored
+test parser::tests::parse_pass::case_152 ... ignored
+test parser::tests::parse_pass::case_153 ... ignored
+test parser::tests::parse_pass::case_154 ... ignored
+test parser::tests::parse_pass::case_155 ... ignored
+test parser::tests::parse_pass::case_156 ... ignored
+test parser::tests::parse_pass::case_157 ... ignored
+test parser::tests::parse_pass::case_158 ... ignored
+test parser::tests::parse_pass::case_159 ... ignored
+test parser::tests::parse_pass::case_160 ... ignored
+test parser::tests::parse_pass::case_161 ... ignored
+test parser::tests::parse_pass::case_162 ... ignored
+test parser::tests::parse_pass::case_163 ... ignored
+test parser::tests::parse_pass::case_164 ... ignored
+test parser::tests::parse_pass::case_165 ... ignored
+test parser::tests::parse_pass::case_166 ... ignored
+test parser::tests::parse_pass::case_167 ... ignored
+test parser::tests::parse_pass::case_168 ... ignored
+test parser::tests::parse_pass::case_169 ... ignored
+test parser::tests::parse_pass::case_170 ... ignored
+test parser::tests::parse_pass::case_171 ... ignored
+test parser::tests::parse_pass::case_172 ... ignored
+test parser::tests::parse_pass::case_173 ... ignored
+test parser::tests::parse_pass::case_174 ... ignored
+test parser::tests::parse_pass::case_175 ... ignored
+test parser::tests::parse_pass::case_176 ... ignored
+test parser::tests::parse_pass::case_177 ... ignored
+test parser::tests::parse_pass::case_178 ... ignored
+test parser::tests::parse_pass::case_179 ... ignored
+test parser::tests::parse_pass::case_180 ... ignored
+test parser::tests::parse_pass::case_181 ... ignored
+test parser::tests::parse_pass::case_182 ... ignored
+test parser::tests::parse_pass::case_183 ... ignored
+test parser::tests::parse_pass::case_184 ... ignored
+test parser::tests::parse_pass::case_185 ... ignored
+test parser::tests::parse_pass::case_186 ... ignored
+test parser::tests::parse_pass::case_187 ... ignored
+test parser::tests::parse_pass::case_188 ... ignored
+test parser::tests::parse_pass::case_189 ... ignored
+test parser::tests::parse_pass::case_190 ... ignored
+test parser::tests::parse_pass::case_191 ... ignored
+test parser::tests::parse_pass::case_192 ... ignored
+test parser::tests::parse_pass::case_193 ... ignored
+test parser::tests::parse_pass::case_194 ... ignored
+test parser::tests::parse_pass::case_195 ... ignored
+test parser::tests::parse_pass::case_196 ... ignored
+test parser::tests::parse_pass::case_197 ... ignored
+test parser::tests::parse_pass::case_198 ... ignored
+test parser::tests::parse_pass::case_199 ... ignored
+test parser::tests::parse_pass::case_200 ... ignored
+test parser::tests::parse_pass::case_201 ... ignored
+test parser::tests::parse_pass::case_202 ... ignored
+test parser::tests::parse_pass::case_203 ... ignored
+test parser::tests::parse_pass::case_204 ... ignored
+test parser::tests::parse_pass::case_205 ... ignored
+test parser::tests::parse_pass::case_206 ... ignored
+test parser::tests::parse_pass::case_207 ... ignored
+test parser::tests::parse_pass::case_208 ... ignored
+test parser::tests::parse_pass::case_209 ... ignored
+test parser::tests::parse_pass::case_210 ... ignored
+test parser::tests::parse_pass::case_211 ... ignored
+test parser::tests::parse_pass::case_212 ... ignored
+test parser::tests::parse_pass::case_213 ... ignored
+test parser::tests::parse_pass::case_214 ... ignored
+test parser::tests::parse_pass::case_215 ... ignored
+test parser::tests::parse_pass::case_216 ... ignored
+test parser::tests::parse_pass::case_217 ... ignored
+test parser::tests::parse_pass::case_218 ... ignored
+test parser::tests::parse_pass::case_219 ... ignored
+test parser::tests::parse_pass::case_220 ... ignored
+test parser::tests::parse_pass::case_221 ... ignored
+test parser::tests::parse_pass::case_222 ... ignored
+test parser::tests::parse_pass::case_223 ... ignored
+test parser::tests::parse_pass::case_224 ... ignored
+test parser::tests::parse_pass::case_225 ... ignored
+test parser::tests::parse_pass::case_226 ... ignored
+test parser::tests::parse_pass::case_227 ... ignored
+test parser::tests::parse_pass::case_228 ... ignored
+test parser::tests::parse_pass::case_229 ... ignored
+test parser::tests::parse_pass::case_230 ... ignored
+test parser::tests::parse_pass::case_231 ... ignored
+test parser::tests::parse_pass::case_232 ... ignored
+test parser::tests::parse_pass::case_233 ... ignored
+test parser::tests::parse_pass::case_234 ... ignored
+test parser::tests::parse_pass::case_235 ... ignored
+test parser::tests::parse_pass::case_236 ... ignored
+test parser::tests::parse_pass::case_237 ... ignored
+test parser::tests::parse_pass::case_238 ... ignored
+test parser::tests::parse_pass::case_239 ... ignored
+test parser::tests::parse_pass::case_240 ... ignored
+test parser::tests::parse_pass::case_241 ... ignored
+test parser::tests::parse_pass::case_242 ... ignored
+test parser::tests::parse_pass::case_243 ... ignored
+test parser::tests::parse_pass::case_244 ... ignored
+test parser::tests::parse_pass::case_245 ... ignored
+test parser::tests::parse_pass::case_246 ... ignored
+test parser::tests::parse_pass::case_247 ... ignored
+test parser::tests::parse_pass::case_248 ... ignored
+test parser::tests::parse_pass::case_249 ... ignored
+test parser::tests::parse_pass::case_250 ... ignored
+test parser::tests::parse_pass::case_251 ... ignored
+test parser::tests::parse_pass::case_252 ... ignored
+test parser::tests::parse_pass::case_253 ... ignored
+test parser::tests::parse_pass::case_254 ... ignored
+test parser::tests::parse_pass::case_255 ... ignored
+test parser::tests::parse_pass::case_256 ... ignored
+test parser::tests::parse_pass::case_257 ... ignored
+test parser::tests::parse_pass::case_258 ... ignored
+test parser::tests::parse_pass::case_259 ... ignored
+test parser::tests::parse_pass::case_260 ... ignored
+test parser::tests::parse_pass::case_261 ... ignored
+
+test result: ok. 0 passed; 0 failed; 311 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

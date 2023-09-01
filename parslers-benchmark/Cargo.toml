@@ -1,0 +1,42 @@
+[package]
+name = "parslers-benchmark"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+
+[[bench]]
+name = "json"
+path = "benches/json.rs"
+harness = false
+
+[[bench]]
+name = "branflakes"
+path = "benches/branflakes.rs"
+harness = false
+
+[build-dependencies]
+parslers = "0.1.1"
+parslers-macro = "0.1.0"
+parslers-json = { path = "../parslers-json" }
+parslers-branflakes = { path = "../parslers-branflakes" }
+fast-float = "0.2.0"
+
+[dependencies]
+nom = "7.1.3"
+parslers-json = {path = "../parslers-json"}
+jemallocator = "0.5.0"
+criterion = {version = "0.5.1", features=["html_reports"]}
+serde_json = "1.0"
+combine = "4.6.6"
+parslers = "0.1.1"
+parslers-macro = "0.1.0"
+pest = "2.6.0"
+pest_grammars = "2.6.0"
+parslers-branflakes = { path = "../parslers-branflakes" }
+
+decurse = "0.0.4"
+fast-float = "0.2.0"
+rstest = "0.17.0"
