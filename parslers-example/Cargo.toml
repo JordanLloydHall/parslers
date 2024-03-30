@@ -5,8 +5,8 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [build-dependencies]
-parslers = { path = "../parslers" }
-parslers-macro = { path = "../parslers-macro" }
+parslers = "0.1.1"
+parslers-macro = "0.1.0"
 parslers-json = { path = "../parslers-json" }
 
 [dependencies]

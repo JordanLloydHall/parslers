@@ -4,10 +4,10 @@ extern crate criterion;
 #[global_allocator]
 static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
 
-use ::combine::{stream::position, EasyParser};
+// use ::combine::{stream::position, EasyParser};
 use criterion::{black_box, Criterion, Throughput};
 use parslers::parsler::Parsler;
-use parslers_benchmark::{combine, nom};
+use parslers_benchmark::nom;
 
 mod optimised_parser {
     #![allow(warnings, unused)]

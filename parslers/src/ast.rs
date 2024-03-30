@@ -469,7 +469,7 @@ impl Parser {
             }
             Parser::Pure(pure_val) => match pure_val {
                 PureVal::Val(val) => {
-                    let val = syn::parse_str::<syn::Expr>(&dbg!(val)).unwrap();
+                    let val = syn::parse_str::<syn::Expr>(&val).unwrap();
                     quote! { Ok(#val) }
                 }
                 PureVal::Func(Func { name }) => {
