@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "parslers-reflect",
+    "parslers-macro",
+    "parslers"]
+resolver = "2"

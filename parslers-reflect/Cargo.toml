@@ -1,0 +1,18 @@
+[package]
+name = "parslers-reflect"
+version = "0.1.0"
+edition = "2021"
+categories = ["parsing", "text-processing"]
+description = "A Staged Selective Parser Combinator Library for the Rust Programming Language"
+keywords = ["parser", "parsing", "parser-combinators", "combinator"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+authors = ["Jordan Hall <Jordanhall123@googlemail.com>"]
+repository = "https://github.com/JordanLloydHall/parslers"
+rust-version = "1.70.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+either = "1"
